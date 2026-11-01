@@ -11,10 +11,8 @@ pluginManagement {
         gradlePluginPortal()
     }
     plugins {
-        val agp = "9.2.0"
-        id("com.android.application") version agp
-        id("com.android.library") version agp
-        id("com.android.settings") version agp
+        id("com.android.application") version "9.0.1"
+        id("com.android.library") version "9.0.1"
     }
 }
 
@@ -33,18 +31,18 @@ dependencyResolutionManagement {
 }
 
 plugins {
-    id("com.android.settings")
+    id("com.android.settings") version "9.0.1"
 }
 
 android {
     compileSdk {
-        version = release(37)
+        version = release(36)
     }
     minSdk {
         version = release(34)
     }
     targetSdk {
-        version = release(37)
+        version = release(36)
     }
     buildToolsVersion = "37.0.0"
 }
@@ -52,5 +50,5 @@ android {
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 enableFeaturePreview("STABLE_CONFIGURATION_CACHE")
 
-rootProject.name = "Ims"
-include(":app")
+rootProject.name = "IMSPatch"
+include(":app", ":stub")

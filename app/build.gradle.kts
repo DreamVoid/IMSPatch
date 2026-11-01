@@ -4,10 +4,10 @@ plugins {
 
 android {
     enableKotlin = false
-    namespace = "io.github.vvb2060.ims"
+    namespace = "me.dreamvoid.imspatch"
     defaultConfig {
-        versionCode = 6
-        versionName = "3.1"
+        versionCode = 1
+        versionName = "1.0"
     }
     buildTypes {
         release {
@@ -24,6 +24,7 @@ android {
     }
     buildFeatures {
         buildConfig = true
+        viewBinding = true
     }
     packaging {
         resources {
@@ -42,4 +43,5 @@ dependencies {
     implementation(libs.shizuku.provider)
     implementation(libs.shizuku.api)
     implementation(libs.hiddenapibypass)
+    compileOnly(project(":stub"))
 }
