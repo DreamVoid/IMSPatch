@@ -1,8 +1,7 @@
 [versions]
-hiddenapibypass = "6.1"
-shizuku = "13.1.5"
+libxposed = "102.0.0"
+libxposed-service = "102.0.0"
 
 [libraries]
-shizuku-api = { module = "dev.rikka.shizuku:api", version.ref = "shizuku" }
-shizuku-provider = { module = "dev.rikka.shizuku:provider", version.ref = "shizuku" }
-hiddenapibypass = { module = "org.lsposed.hiddenapibypass:hiddenapibypass", version.ref = "hiddenapibypass" }
+libxposed-api = { module = "io.github.libxposed:api", version.ref = "libxposed" }
+libxposed-service = { module = "io.github.libxposed:service", version.ref = "libxposed-service" }

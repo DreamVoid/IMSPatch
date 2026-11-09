@@ -36,13 +36,15 @@ plugins {
 
 android {
     compileSdk {
-        version = release(36)
+        version = release(37) {
+            minorApiLevel = 2
+        }
     }
     minSdk {
         version = release(34)
     }
     targetSdk {
-        version = release(36)
+        version = release(37)
     }
     buildToolsVersion = "37.0.0"
 }
@@ -51,4 +53,4 @@ enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 enableFeaturePreview("STABLE_CONFIGURATION_CACHE")
 
 rootProject.name = "IMSPatch"
-include(":app", ":stub")
+include(":app")

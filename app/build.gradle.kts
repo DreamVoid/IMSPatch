@@ -6,8 +6,8 @@ android {
     enableKotlin = false
     namespace = "me.dreamvoid.imspatch"
     defaultConfig {
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 3
+        versionName = "2.0"
     }
     buildTypes {
         release {
@@ -28,6 +28,7 @@ android {
     }
     packaging {
         resources {
+            merges += "META-INF/xposed/*"
             excludes += "**"
         }
     }
@@ -40,8 +41,6 @@ android {
 }
 
 dependencies {
-    implementation(libs.shizuku.provider)
-    implementation(libs.shizuku.api)
-    implementation(libs.hiddenapibypass)
-    compileOnly(project(":stub"))
+    compileOnly(libs.libxposed.api)
+    implementation(libs.libxposed.service)
 }
